@@ -20,7 +20,7 @@ jobs:
         run: |
           aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 244530008913.dkr.ecr.eu-west-1.amazonaws.com
           rev=$(git rev-parse --short HEAD)
-          docker build . -t 1035
+          docker build . -t shopefly
           docker tag shopefly 244530008913.dkr.ecr.eu-west-1.amazonaws.com/1035:$rev
           docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/1035:$rev
 
