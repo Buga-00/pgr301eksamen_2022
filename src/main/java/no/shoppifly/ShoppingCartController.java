@@ -1,8 +1,6 @@
 package no.shoppifly;
 
-import io.micrometer.core.instrument.Gauge;
-import io.micrometer.core.instrument.Meter;
-import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
@@ -12,8 +10,6 @@ import java.util.List;
 
 @RestController()
 public class ShoppingCartController implements ApplicationListener<ApplicationReadyEvent> {
-
-
 
     private MeterRegistry meterRegistry;
 
@@ -65,6 +61,10 @@ public class ShoppingCartController implements ApplicationListener<ApplicationRe
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
         Gauge.builder("carts_count", cartService,
                 c -> c.getAllsCarts().size()).register(meterRegistry);
+
+        Gauge.builder("money", cartService,
+                c -> c.total()).register(meterRegistry);
+
     }
 
 
