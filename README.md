@@ -34,15 +34,6 @@
 
 ## Del 2 - CI
 
-Konsulentene som har jobbet med innføring av DevOps har startet på en GitHub actions workflow for kontinuerlig
-integrasjon. GitHub actions workflow (yml) filen ligger i dette repositoryet og heter ````ci.yml````
-
-Problemet er at utviklingsteamet må starte jobben manuelt fra GitHub actions brukergrensesnittet. Det er jo ikke bra!
-
-Du kan gjerne teste dette selv ved å gå til "Actions" i ditt repository, du vil se teksten "This workflow has a workflow_dispatch event trigger." Og vil
-ha et valg som heter "Run workflow"
-
-
 ### Oppgave 3 
 
 For å implementere branch protection og status sjekker, så må man inn i github deretter gå inn på settings også branches som ligger under Code and automation. 
