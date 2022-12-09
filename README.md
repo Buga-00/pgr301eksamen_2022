@@ -1,17 +1,36 @@
 # DevOps med gode intensjoner
 
-
-
 ## Del 1 DevOps-prinsipper
-
-Beskriv med egne ord;
 
 * Hva er utfordringene med dagens systemutviklingsprosess - og hvordan vil innføring av DevOps kunne være med på å løse
   disse? Hvilke DevOps prinsipper blir brutt?
+
+  Svar: Utfordringene med dagens systemutviklingsprosess er at det ikke er en kontinuerlig forbedring i kodestrukturen, oppdatering av applikasjonen med dette mener jeg release av ny funksjonalitet og dårlig kommunikasjon mellom organisasjonen og IT-teamet de har leid.
+  Innføring av DevOps ville løst disse problemene ved å ha et DevOps IT team i organisasjonen som gjør koden automatisert ved bruk av pipeline.
+  De har en kontinuerlig integrasjon og leveranse.
+  Tester som gir dem feedback om koden kjører som den skal i tillegg til cloudwatch metrics og cloudwatch alarm som gir dem en ekstern overvåkning.
+  DevOps prinsippene som blir brutt med dagens systemutvikling er Flyt og Feedback.
+  Dette er fordi dagens systemutviklingsprosess har ikke en bra måte å få feedback på som for eksempel ved bruk av cloudwatch og micrometre.
+  De har heller ikke n bra flyt hvor de kan automatisere prosessen ved bruk av for eksempel github actions med pipeline eller Docker i pipeline.
+
 * En vanlig respons på mange feil under release av ny funksjonalitet er å gjøre det mindre hyppig, og samtidig forsøke å legge på mer kontroll og QA. Hva er problemet med dette ut ifra et DevOps perspektiv, og hva kan være en bedre tilnærming?
-* Teamet overleverer kode til en annen avdelng som har ansvar for drift - hva er utfordringen med dette ut ifra et DevOps perspektiv, og hvilke gevinster kan man få ved at team han ansvar for både drift- og utvikling? 
+
+  Svar: 
+
+* Teamet overleverer kode til en annen avdelng som har ansvar for drift - hva er utfordringen med dette ut ifra et DevOps perspektiv, og hvilke gevinster kan man få ved at team han ansvar for både drift- og utvikling?
+
+  Svar: Utfordringene med at en annen avdeling har ansvar for drift av en kode de ikke har laget selv er at de for det første ikke erkjent med koden.
+  Hvis det dukker opp en feil, så kan det hende de som drifter den ikke vet hvor denne feilen kommer fra og må enten da bruke lang tid på å debugge og finne feilen eller så må de kontakte den avdelingen de fikk den fra og få rettet den opp fra dem.
+  Gevinstene med å både drifte og utvikle koden er at teamet har mye bedre kommunikasjon mellom hverandre.
+  Teamet vet hvordan koden er strukturert som fører til at de alltid har en kontinuerlig forbedring og større sannsynlighet til å debugge.
+  Flinkere til å få en kontinuerlig integrasjon og levering.
+
 * Å release kode ofte kan også by på utfordringer. Beskriv hvilke- og hvordan vi kan bruke DevOps prinsipper til å redusere
   eller fjerne risiko ved hyppige leveraner.
+
+  Svar: For å redusere eller fjerne risiko ved hyppige leveranser, så er det best å gjøre alt automatisk på grunn av oftest, så kommer feil ved hyppige leveranser gjennom manuelle prosesser.
+  DevOpps prinsipper som burde bli brukt er flow med automation og continuous delivery hvor du har hyppige leveranser uten noen manuelle prosesser, men alt er i en automatisk prosess.
+
 
 ## Del 2 - CI
 
