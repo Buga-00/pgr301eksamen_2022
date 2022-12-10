@@ -1,5 +1,5 @@
 resource "aws_cloudwatch_metric_alarm" "zerosum" {
-  alarm_name                = "Carts no more then three in 5 minutes"
+  alarm_name                = "Carts no more then five in 5 minutes"
   namespace                 = var.candidate_id
   metric_name               = "cart_count.value"
 
@@ -10,7 +10,7 @@ resource "aws_cloudwatch_metric_alarm" "zerosum" {
 
   statistic                 = "Maximum"
 
-  alarm_description         = "This alarm goes off as soon as the total amount of carts are over three in 5 minutes "
+  alarm_description         = "This alarm goes off as soon as the total amount of carts active are above 5 in 5 minutes "
   insufficient_data_actions = []
   alarm_actions       = [aws_sns_topic.alarms.arn]
 }
