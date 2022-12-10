@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_metric_alarm" "zerosum" {
   alarm_name                = "Carts no more then five in 5 minutes"
   namespace                 = var.candidate_id
-  metric_name               = "cart_count.count"
+  metric_name               = "cart_count.value"
 
   comparison_operator       = "GreaterThanThreshold"
   threshold                 = "5"
